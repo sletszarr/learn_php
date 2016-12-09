@@ -14,7 +14,7 @@ class QueryBuilder {
     {
         $this->pdo = $pdo;
     }
-    
+
     public function selectAll($tableName)
     {
         $statement = $this->pdo->prepare('select * from '.$tableName);
