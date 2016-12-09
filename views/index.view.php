@@ -16,10 +16,10 @@
 </head>
 <body>
 <nav>
-    <ul>
-        <li><a href="about.php">About</a></li>
-        <li><a href="contact.php">Contact</a></li>
-    </ul>
+    <uld>
+        <li><a href="about.view.php">About</a></li>
+        <li><a href="contact.view.php">Contact</a></li>
+    </uld>
 </nav>
 
 <h1>My Task</h1>

@@ -7,10 +7,8 @@
  *
  */
 
-$query = require 'bootstrap.php';
-
-require 'Task.php';
+$query = require 'core/bootstrap.php';
 
 $tasks = $query->selectAll('todos');
 
-require 'index.view.php';
+require 'views/index.view.php';

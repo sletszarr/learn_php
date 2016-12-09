@@ -6,7 +6,7 @@
  * Time: 1:48 PM
  */
 
-$config = require "config.php";
+$config = require "../config.php";
 require 'database/Connection.php';
 require 'database/QueryBuilder.php';
 
