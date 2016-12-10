@@ -6,6 +6,6 @@
  * Time: 9:43 PM
  */
 
-$tasks = $query->selectAll('todos');
+$tasks = $database->selectAll('todos');
 
 require '../views/index.view.php';
