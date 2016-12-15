@@ -35,6 +35,12 @@ $unpublishedPost = array_filter($posts, function ($post) {
     return !$post->published;
 });
 
-var_dump($unpublishedPost);
+// modified published property on each iteration
+array_map(function ($post) {
+    $post->published = true;
+    return $post;
+}, $posts);
+
+var_dump($posts);
 
 
