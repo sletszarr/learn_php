@@ -35,13 +35,14 @@ $unpublishedPost = array_filter($posts, function ($post) {
     return !$post->published;
 });
 
-// modified published property on each iteration
-// then also save the modified version to $modified
 $modified = array_map(function ($post) {
-    $post->published = true;
-    return $post;
+
+    // return it as an array,
+    // not a $post object
+    return (array) $post;
+
 }, $posts);
 
-var_dump($posts);
+var_dump($modified);
 
 
