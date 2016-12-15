@@ -8,7 +8,7 @@
 
 class Post {
 
-    public $title;
+    protected $title;
 
     public $published;
 
@@ -35,7 +35,7 @@ $unpublishedPost = array_filter($posts, function ($post) {
     return !$post->published;
 });
 
-// a better way to get an array from object's properties
+// array_column can't access non-public property
 $titles = array_column($posts, 'title');
 
 var_dump($titles);
