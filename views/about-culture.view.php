@@ -1,9 +1,6 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>About Our Culture</title>
-</head>
-<body>
+<?php require('partials/header.php') ?>
+
+
 <h1>Our Culture</h1>
-</body>
-</html>
+
+<?php require('partials/footer.php') ?>

@@ -1,9 +1,5 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+<?php require ('partials/header.php') ?>
+
 <h1>About Us</h1>
-</body>
-</html>
+
+<?php require ('partials/footer.php') ?>
