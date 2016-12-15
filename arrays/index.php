@@ -8,23 +8,26 @@
 
 class Post {
 
-    protected $title;
+    public $title;
+
+    public $author;
 
     public $published;
 
-    public function __construct($title, $published)
+    public function __construct($title, $author, $published)
     {
         $this->title = $title;
+        $this->author = $author;
         $this->published = $published;
     }
 
 }
 
 $posts = [
-    new Post("My first post", true),
-    new Post("My second post", true),
-    new Post("My third post", false),
-    new Post("My fourth post", true)
+    new Post("My first post", 'BN', true),
+    new Post("My second post", 'DWP', true),
+    new Post("My third post", 'AW', false),
+    new Post("My fourth post", 'BR', true)
 ];
 
 $publishedPost = array_filter($posts, function ($post) {
@@ -35,15 +38,11 @@ $unpublishedPost = array_filter($posts, function ($post) {
     return !$post->published;
 });
 
-// even when you convert the $post object to an array
-$posts = array_map(function ($post) {
-    return (array) $post;
-}, $posts);
 
+// you can define a third argument
+// to act as the key
+$authors = array_column($posts, 'title', 'author');
 
-// you still can't access the protected property
-$titles = array_column($posts, 'title');
-
-var_dump($titles);
+var_dump($authors);
 
 
