@@ -35,7 +35,13 @@ $unpublishedPost = array_filter($posts, function ($post) {
     return !$post->published;
 });
 
-// array_column can't access non-public property
+// even when you convert the $post object to an array
+$posts = array_map(function ($post) {
+    return (array) $post;
+}, $posts);
+
+
+// you still can't access the protected property
 $titles = array_column($posts, 'title');
 
 var_dump($titles);
