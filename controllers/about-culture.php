@@ -6,4 +6,4 @@
  * Time: 6:14 PM
  */
 
-require "../views/about-culture.view.php";
+require "views/about-culture.view.php";

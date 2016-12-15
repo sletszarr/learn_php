@@ -6,6 +6,7 @@
  * Time: 9:43 PM
  */
 
+
 $tasks = $database->selectAll('todos');
 
-require '../views/index.view.php';
+require 'views/index.view.php';

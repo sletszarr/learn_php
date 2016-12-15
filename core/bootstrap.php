@@ -6,9 +6,11 @@
  * Time: 1:48 PM
  */
 
-$config = require "../config.php";
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
+$config = require "config.php";
+
+require 'core/Router.php';
+require 'core/database/Connection.php';
+require 'core/database/QueryBuilder.php';
 
 // get Query instance
 return new QueryBuilder(Connection::make($config['database']));

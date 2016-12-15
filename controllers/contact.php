@@ -6,4 +6,4 @@
  * Time: 6:14 PM
  */
 
-require "../views/contact.view.php";
+require "views/contact.view.php";
