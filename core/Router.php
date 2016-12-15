@@ -10,6 +10,15 @@ class Router {
 
     protected $routes = [];
 
+    public static function load($routes)
+    {
+        $router = new self;
+
+        require $routes;
+
+        return $router;
+    }
+
     public function define($routes)
     {
         $this->routes = $routes;

@@ -16,10 +16,12 @@
 </head>
 <body>
 <nav>
-    <uld>
+    <ul>
+        <li><a href="">Home</a></li>
         <li><a href="about">About</a></li>
+        <li><a href="about/culture">Our Culture</a></li>
         <li><a href="contact">Contact</a></li>
-    </uld>
+    </ul>
 </nav>
 
 <h1>My Task</h1>

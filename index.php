@@ -9,10 +9,8 @@
 
 $database = require 'core/bootstrap.php';
 
-$router = new Router();
+$uri = trim($_SERVER['REQUEST_URI'], '/');
 
-require 'routes.php';
+require Router::load("routes.php")
+    ->direct($uri);
 
-$uri = (trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
-
-require $router->direct($uri);

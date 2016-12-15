@@ -7,8 +7,8 @@
  */
 
 $router->define([
-    'learn' => 'controllers/index.php',
-    'learn/about' => 'controllers/about.php',
-    'learn/about/culture' => 'controllers/about-culture.php',
-    'learn/contact' => 'controllers/contact.php'
+    '' => 'controllers/index.php',
+    'about' => 'controllers/about.php',
+    'about/culture' => 'controllers/about-culture.php',
+    'contact' => 'controllers/contact.php'
 ]);
