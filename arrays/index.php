@@ -35,13 +35,9 @@ $unpublishedPost = array_filter($posts, function ($post) {
     return !$post->published;
 });
 
-$modified = array_map(function ($post) {
+// a better way to get an array from object's properties
+$titles = array_column($posts, 'title');
 
-    // get an array of titles
-    return $post->title;
-
-}, $posts);
-
-var_dump($modified);
+var_dump($titles);
 
 
