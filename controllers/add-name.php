@@ -7,4 +7,4 @@
  *
  */
 
-var_dump($_REQUEST);
+var_dump("you type ".$_REQUEST['name']);
