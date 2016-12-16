@@ -2,7 +2,7 @@
 
 <h1>Submit your name</h1>
 
-<form method="get" action="/names">
+<form method="post" action="/names">
     <input type="text" name="name">
     <button type="submit">Submit</button>
 </form>
