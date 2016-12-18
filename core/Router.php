@@ -35,10 +35,23 @@ class Router {
     public function direct($uri, $requestType)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {
-            return $this->routes[$requestType][$uri];
+            $this->callAction(
+                ...explode('@', $this->routes[$requestType][$uri])
+            );
         } else {
             throw new Exception('routes not found');
         }
+    }
+
+    protected function callAction($controller, $action)
+    {
+        $ctl = new $controller();
+
+        if (! method_exists($ctl, $action)) {
+            throw new Exception($controller.' does\'t response to '.$action.' action');
+        }
+
+        return $ctl->$action();
     }
 
 }
