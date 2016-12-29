@@ -10,14 +10,7 @@ class PagesController
 {
     public function home()
     {
-
-        $tasks = App::get('database')->selectAll('todos');
-        $users = App::get('database')->selectAll('users');
-
-        return view('index', [
-            'tasks' => $tasks,
-            'users' => $users
-        ]);
+        return view('index');
     }
 
     public function about()

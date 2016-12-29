@@ -20,5 +20,11 @@ function view($view_name, $data = [])
     extract($data);
 
     return require 'views/' . $view_name . '.view.php';
-};
+}
+
+function redirect($path)
+{
+    return header('Location: /users');
+
+}
 
