@@ -6,11 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Contrrollers\\PagesController' => $baseDir . '/controllers/PagesController.php',
-    'App\\Contrrollers\\UsersController' => $baseDir . '/controllers/UsersController.php',
+    'App\\Contrrollers\\PagesController' => $baseDir . '/app/controllers/PagesController.php',
+    'App\\Contrrollers\\UsersController' => $baseDir . '/app/controllers/UsersController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
+    'App\\Models\\Projects' => $baseDir . '/app/models/Projects.php',
     'ComposerAutoloaderInit5cebe71c07f59877e8e4f8efe3e237e7' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit5cebe71c07f59877e8e4f8efe3e237e7' => $vendorDir . '/composer/autoload_static.php',

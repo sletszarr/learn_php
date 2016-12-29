@@ -21,7 +21,7 @@ function view($view_name, $data = [])
 {
     extract($data);
 
-    return require 'views/' . $view_name . '.view.php';
+    return require 'app/views/' . $view_name . '.view.php';
 }
 
 function redirect($path)
