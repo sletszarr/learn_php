@@ -6,6 +6,8 @@
  * Time: 7:06 PM
  */
 
+namespace App\Core;
+
 class Router {
 
     public $routes = [
@@ -45,7 +47,8 @@ class Router {
 
     protected function callAction($controller, $action)
     {
-        $ctl = new $controller();
+        $ctl= "App\\Contrrollers\\{$controller}";
+        $ctl = new $ctl;
 
         if (! method_exists($ctl, $action)) {
             throw new Exception($controller.' does\'t response to '.$action.' action');

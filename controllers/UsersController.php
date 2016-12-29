@@ -6,6 +6,10 @@
  * Time: 10:00 PM
  */
 
+namespace App\Contrrollers;
+
+use App\Core\App;
+
 class UsersController {
 
     public function index()

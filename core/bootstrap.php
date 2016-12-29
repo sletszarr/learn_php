@@ -6,6 +6,8 @@
  * Time: 1:48 PM
  */
 
+use App\Core\App;
+
 App::bind('config', require 'config.php');
 
 // get Query instance
